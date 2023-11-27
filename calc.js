@@ -22,7 +22,7 @@ const divide = function (a, b) {
 let firstNumber = null;
 let secondNumber = null;
 let operator = '';
-let displayValue = '';
+let displayValue = '0';
 
 
 
@@ -46,7 +46,10 @@ const operate = function (operator, firstNumber, secondNumber) {
 const btns = document.querySelector('#btns');
 const input = document.querySelector('#input');
 
+input.textContent = displayValue;
+
 btns.addEventListener('click', (e) => {
+    displayValue = '';
     displayValue += e.target.textContent;
     input.textContent = displayValue;
 });
@@ -54,7 +57,7 @@ btns.addEventListener('click', (e) => {
 const operatorBtns = document.querySelector('#operators');
 
 operatorBtns.addEventListener('click', (e) => {
-    if (firstNumber) {
+    if (operator && firstNumber) {
         secondNumber = parseInt(displayValue);
         displayValue = operate(operator, firstNumber, secondNumber);
         input.textContent = displayValue;
@@ -77,11 +80,7 @@ equalsBtn.addEventListener('click', (e) => {
         secondNumber = parseInt(displayValue);
         displayValue = operate(operator, firstNumber, secondNumber);
         input.textContent = displayValue;
-
-        firstNumber = parseInt(displayValue);
-        secondNumber = 0;
         operator = '';
-        displayValue = '';
     }
 });
 
