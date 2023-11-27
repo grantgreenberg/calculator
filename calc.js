@@ -14,9 +14,12 @@ const divide = function (a, b) {
     return a / b;
 };
 
-let firstNumber;
-let secondNumber;
-let operator;
+let firstNumber = 0;
+let secondNumber = 0;
+let operator = '';
+let displayValue = '';
+
+
 
 const operate = function (operator, firstNumber, secondNumber) {
     switch (operator) {
@@ -34,3 +37,21 @@ const operate = function (operator, firstNumber, secondNumber) {
             
     }
 };
+
+const btns = document.querySelector('#btns');
+const input = document.querySelector('#input');
+
+btns.addEventListener('click', (e) => {
+    console.log('Button Clicked:', e.target.textContent);
+    displayValue += e.target.textContent;
+    input.textContent = displayValue;
+});
+
+const operatorBtns = document.querySelector('#operators');
+
+operatorBtns.addEventListener('click', (e) => {
+    firstNumber = parseInt(displayValue);
+    operator = e.target.id;
+    displayValue = '';
+    input.textContent = displayValue;
+})
