@@ -22,23 +22,23 @@ const divide = function (a, b) {
 let firstNumber = null;
 let secondNumber = null;
 let operator = '';
-let displayValue = '0';
+let displayValue = '';
 
 
 
 const operate = function (operator, firstNumber, secondNumber) {
     switch (operator) {
         case 'add':
-            return add(firstNumber, secondNumber);
-            
+            return Math.round(add(firstNumber, secondNumber) * 100) / 100;
+
         case 'subtract':
-            return subtract(firstNumber, secondNumber);
+            return Math.round(subtract(firstNumber, secondNumber) * 100) / 100;
             
         case 'multiply':
-            return multiply(firstNumber, secondNumber);
+            return Math.round(multiply(firstNumber, secondNumber) * 100) / 100;
             
         case 'divide':
-            return divide(firstNumber, secondNumber);
+            return Math.round(divide(firstNumber, secondNumber) * 100) / 100;
             
     }
 };
@@ -49,7 +49,6 @@ const input = document.querySelector('#input');
 input.textContent = displayValue;
 
 btns.addEventListener('click', (e) => {
-    displayValue = '';
     displayValue += e.target.textContent;
     input.textContent = displayValue;
 });
