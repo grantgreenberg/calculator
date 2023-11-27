@@ -3,4 +3,4 @@ This is a simple calculator web app built with HTML, CSS, and JavaScript. The ca
 
 ## Usage
 
-To use the calculator, you can access the live version [here](https://grantgreenberg.github.io/calculator/).
+To use the calculator, you can access the live version <a href="https://grantgreenberg.github.io/calculator/" target="_blank">here</a>.
