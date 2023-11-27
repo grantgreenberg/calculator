@@ -1,13 +1,15 @@
 * {
-
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-#container {
+body {
+    background-color: #f0f0f0;
+}
 
+#container {
     width: 30%;
     margin: 100px auto;
     display: flex;
@@ -16,36 +18,36 @@
     border: 1px solid lightgray;
     border-radius: 10px;
     padding: 20px;
+    background-color: #ffffff;
 }
 
 .io {
-
     text-align: right;
-    font-size: 50px;
+    font-size: 2em;
     min-height: 80px;
     background-color: #F4F4F4;
     border-radius: 10px;
     width: 75%;
     margin: auto;
     padding: 5px;
-
 }
 
 .btn {
-
-    font-size: 30px;
+    font-size: 1.5em;
     padding: 10px;
     width: 50px;
     height: 50px;
+    background-color: #cccccc;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
 }
 
 .btn:hover {
-
     filter: brightness(0.9);
 }
 
 .btnContainer {
-
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
@@ -53,27 +55,16 @@
     margin: auto;
     justify-content: center;
     align-items: center;
-
 }
 
-#btns button {
-
-    background-color: lightcyan;
-    border-radius: 10px;
-    padding: 5px;
+.operator {
+    background-color: #999999;
 }
 
-#operators button {
-
-    background-color: lightgoldenrodyellow;
-    border-radius: 10px;
-    padding: 5px;
+.equal {
+    background-color: #66cc66;
 }
 
-#ec button {
-
-    background-color: lightsalmon;
-    border-radius: 10px;
-    padding: 5px;
+.clear {
+    background-color: #ff6666;
 }
-
